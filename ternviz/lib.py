@@ -1,4 +1,5 @@
 import sys
+import rdkit
 from rdkit import Chem
 from rdkit.Chem import AllChem
 import tempfile
@@ -12,7 +13,7 @@ from rdkit.DataStructs.cDataStructs import TanimotoSimilarity
 import urllib.request
 from PIL import Image
 
-Chem.WrapLogs()
+rdkit.rdBase.LogToPythonStderr()
 
 
 def canonicalize(smiles):
